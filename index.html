@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Reddit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Simple Reddit</h1>
+      <div id="auth-buttons">
+        <button id="login-button">Log In</button>
+        <button id="signup-button">Sign Up</button>
+      </div>
+    </header>
+
+    <main id="main-container">
+      <aside id="sidebar" style="display: none;">
+        <h2>Subreddits</h2>
+        <div id="subreddit-list">
+          <!-- Subreddit buttons will be added dynamically -->
+        </div>
+        <button id="create-subreddit-button">Create Subreddit</button>
+        <button id="profile-button">View Profile</button>
+      </aside>
+
+      <section id="content">
+        <section id="welcome-section">
+          <h2>Welcome to Simple Reddit</h2>
+          <p>Log in or sign up to get started.</p>
+        </section>
+
+        <section id="post-section" style="display: none;">
+          <h2 id="subreddit-title"></h2>
+          <button id="subscribe-button" style="display: none;">Subscribe</button>
+          <div id="posts-container"></div>
+          <form id="post-form">
+            <input type="text" id="post-title" placeholder="Post Title" required />
+            <textarea id="post-content" placeholder="Post Content" required></textarea>
+            <button type="submit">Create Post</button>
+          </form>
+        </section>
+
+        <section id="profile-section" style="display: none;">
+          <h2 id="profile-name"></h2>
+          <p><strong>Subscribed Subreddits:</strong></p>
+          <ul id="profile-subreddits"></ul>
+          <p><strong>Total Upvotes Received:</strong> <span id="profile-upvotes">0</span></p>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
